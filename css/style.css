@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Ubuntu&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans';
+}
+
+:root{
+    --text-color: rgb(168,85,247);
+    --brand-name: rgb(197, 142, 249);
+}
+
+.para{
+    line-height: 35px;
+}
+
+.head{
+    text-align: center;
+    padding: 10px;
+    color: var(--text-color);
+    font-family: 'Ubuntu',sans-serif;
+}
+
+.btn,input[type=submit],input[type=reset]{
+    padding: 10px;
+    border-radius: 15%;
+    font-weight: 700;
+    font-size: 15px;
+    color: var(--text-color);
+    background-color: transparent;
+    border: 3px solid var(--text-color);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover,input[type=submit]:hover,input[type=reset]:hover{
+    color: aliceblue;
+    background-color: var(--text-color);
+    box-shadow: 0px 0px 12px 5px var(--brand-name);
+}
+.brand_head{
+    color: var(--text-color);
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+.nav{
+    width: 100%;
+    overflow: hidden;
+    list-style-type: none;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+}
+
+.nav .links .brand{
+    float: left;
+}
+
+.nav .links a{
+    display: block;
+    color: var(--text-color);
+}
+
+.nav .p a:hover{
+    transform: scale(1.09,1.02);
+    text-decoration: underline 3px solid rgb(168, 85, 247);
+    text-underline-position: under;
+}
+
+.nav .links li{
+    padding: 5px 15px;
+    display: block;
+    float: right;
+}
+
+.nav .links .login_li{
+    padding-top: 0px;
+}
+
+.nav .links .p{
+    padding-top: 10px;
+}
+
+.nav ul li .material-icons{
+    color: var(--text-color);
+}
+
+.nav ul li .menu{
+    background-color: transparent;
+    border: none;
+    
+}
+
+.nav .links .three_dot{
+    display: none;
+}
+
+
+
+.section{
+    display: flex;
+    justify-content: center;
+    padding: 9rem 14rem;
+    padding-bottom: 10rem;
+}
+
+.intro .name_para{
+    text-align: center;
+    margin: auto;
+}
+
+.intro .name_para .para{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 22px;
+}
+
+.intro .name_para .name{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.intro img{
+    width: 24rem;
+}
+
+
+
+#aboutme img{
+    width: 30rem;
+}
+
+
+#aboutme .about_para{
+    margin: auto;
+}
+
+
+
+.services{
+    padding-top: 79px;
+}
+
+.services .card{
+    text-align: center;
+    margin: 30px;
+    max-width: 300px;
+    border: 2px solid var(--text-color);
+    border-radius: 10px;
+    padding: 10px;
+    transition: 0.5s ease;
+}
+
+.services .card:hover{
+    transform: scale(1.01,1.01);
+    box-shadow: 0px 0px 12px 5px var(--brand-name);
+
+}
+
+
+.contactme{
+    text-align: center;
+    flex-direction: column;
+    padding-top: 79px;
+    padding-bottom: 79px;
+}
+
+.contactme form{
+    padding: 30px;
+}
+
+.contactme form input[type=text],
+input[type=email],
+textarea {
+    margin-bottom: 20px;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.contactme form input[type=text],
+input[type=email] {
+    height: 30.5px;
+}
+
+
+
+
+
+
+footer .foot, footer .brand_head{
+    display: inline-block;
+    padding: 15px 40px;
+}
+
+footer .contact_links{
+    float: right;
+    display: flex;
+    list-style-type: none;
+    padding: 8px;
+    padding-top: 15px;
+}
+
+footer .contact_links li{
+    padding: 0px 5px;
+    
+}
+
+footer .contact_links li a svg:hover{
+    border-radius: 100%;
+    box-shadow: 0px 0px 8px 2px rgb(168, 85, 247);
+}
+
+
+
+@media screen and (max-width: 1126px) and (min-width: 0px) {
+    .nav .links .disp_none{
+        display: none;
+    }
+
+    .nav .links li .material-icons{
+        font-size: 40px;
+    }
+
+    .nav .links .three_dot{
+        padding: 0px;
+        display: inline-block;
+    }
+
+    #aboutme{
+        padding: 0px;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+    }
+
+    #aboutme .about_para{
+        text-align: center;
+    }
+
+    #aboutme .about_para .aboutpara{
+        padding: 30px;
+        padding-bottom: 10px;
+    }
+
+    #services{
+        padding-top: 100px;
+    }
+
+    #contactme{
+        padding-top: 100px;
+    }
+
+}
+
+@media screen and (max-width: 746px) and (min-width: 0px) {
+    .intro{
+        padding: 133px 0px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro img, #aboutme img{
+        width: 100%;
+    }
+
+    .services,.contactme{
+        padding: 0px;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+        padding-top: 30px;
+    }
+
+    .services .card{
+        padding: 20px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    footer .brand{
+        margin: auto;
+    }
+    
+    footer .contact_links{
+        float: none;
+        justify-content: center;
+    }
+}
